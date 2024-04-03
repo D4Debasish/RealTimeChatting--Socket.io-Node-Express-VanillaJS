@@ -1,0 +1,40 @@
+body, html {
+    height: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0; 
+    background-image: url(https://t4.ftcdn.net/jpg/05/42/73/17/360_F_542731787_npIDENXs9NMkl1mtyHKj8De2WBL2vnFW.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main {
+    padding: 45px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgb(19, 30, 89);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(3px);
+  }
+  
+  #inp {
+    flex: 1;
+    margin-right: 10px;
+    padding: 6px 6px;
+  }
+  
+  #btn {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 8px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  #txt{
+    font-weight: bold;
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websockets</title>
+    <link rel="stylesheet" href="stype.css">
+</head>
+<body>
+    <div class="main" >
+       <input type="text" placeholder="enter your message" id="inp">
+       <button id="btn" >Enter</button>  
+    </div>
+    <div class="text"><p id="txt"></p>
+    
+    </div>
+    
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script> 
+   const socket = io();
+   const message = document.getElementById("inp");
+   const btn = document.getElementById("btn");
+   const txt = document.getElementById("txt")
+
+   socket.on('allmessage',(message)=>{ txt.innerHTML = message;})
+
+   btn.addEventListener('click', (e)=>{
+    const messageval = message.value;
+    // console.log(messageval)
+    socket.emit("user-message",messageval) 
+   })
+   
+
+</script>
+</html>
